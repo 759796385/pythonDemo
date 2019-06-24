@@ -6,4 +6,4 @@ s3 = r'Hello, "Bart"'
 s4 = r'''Hello,
 Lisa!'''
 null=None
-print  null
+print (null)
