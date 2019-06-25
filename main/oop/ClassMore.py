@@ -27,4 +27,4 @@ class SomeField(object):
     __slots__ = ('name','age')
 
 s =SomeField()
-# s.address = "dsada" 执行报错
+# s.address = "dsada" 执行报错~~
