@@ -43,3 +43,11 @@ def handleList(*list):
 
 assert handleList(1, 2) == 3
 
+
+#  map参数，加**
+def person(name, age, **kw):
+    print('name:', name, 'age:', age, 'other:', kw)
+
+
+# name: Michael age: 30 other: {'gender': 'M', 'job': 'Engineer'}
+person('Michael', 30, gender='M', job='Engineer')
