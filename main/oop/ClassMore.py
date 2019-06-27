@@ -28,3 +28,27 @@ class SomeField(object):
 
 s =SomeField()
 # s.address = "dsada" 执行报错~~
+
+# @property装饰器负责把一个方法变成属性调用. @score.setter 负责把一个setter方法变成属性赋值
+class Man(object):
+    @property
+    def score(self):
+        return self._score
+
+    @score.setter
+    def score(self,value):
+        if not isinstance(value,int):
+            raise ValueError('score must be an integer!')
+        if value<0 or value >100:
+            raise ValueError('score must be range!')
+        self._score = value
+# age
+    @property
+    def age(self):
+        return 21
+
+s = Man()
+s.score = 100
+assert s.age==21
+
+
