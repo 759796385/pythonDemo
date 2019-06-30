@@ -18,9 +18,3 @@ if __name__=='__main__':
     p.join()
     print('All subprocess done')
 
-
-#创建子进程
-import subprocess
-print('$ nslookup www.python.org') # 直接在命令行运行命令
-r = subprocess.call(['nslookup', 'www.python.org'])
-print('Exit code:', r)
