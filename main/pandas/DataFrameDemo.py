@@ -2,7 +2,7 @@ import pandas as pd
 import numpy as np
 
 # DataFrame（x轴，y轴）
-left = pd.DataFrame({'logistics_code': [], 'sku_code': [], 'inventory': []})
+left = pd.DataFrame({'logistics_code': ['1011'], 'sku_code': ['30010001'], 'inventory': [4]})
 right = pd.DataFrame({'warehouse_code': ['1011', '1011', '1011'], 'area': ['华北', '华北', '华北'],
                       'sku_code': ['30010001', '30010010', '30010100'], 'logistics_sku_status': ['01', '02', '03'],
                       'start_date': ['2019-07-18', '2019-07-18', '2019-07-18']})
@@ -10,7 +10,7 @@ right = pd.DataFrame({'warehouse_code': ['1011', '1011', '1011'], 'area': ['华�
 print(left.info())
 print('我是分割线')
 print(right.info())
-# 合并
+# 合并 取交集
 region_warehouse_inv = left.merge(right, left_on=['logistics_code', 'sku_code'],
                                   right_on=['warehouse_code', 'sku_code'])
 print('------------mergerResult \n', region_warehouse_inv)

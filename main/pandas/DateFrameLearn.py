@@ -77,7 +77,7 @@ df3con = pd.concat(pieces)
 #一般更适用于 sql 风格的拼接
 left = pd.DataFrame({'key':['foo','foo'],'rvalx':[4,5]})
 right =pd.DataFrame({'key':['foo','foo'],'rvaly':[1,2]})
-# merge 笛卡尔积
+# merge 取交集  类似 join
 merge = pd.merge(left,right,on='key')
 line = pd.DataFrame({'key':['E'],'rvalx':[9],'rvaly':[10]})
 #追加一行
